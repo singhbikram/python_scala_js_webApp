@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', include('index.urls')),
 ]
-#when we are in development mode use following directories
+#development mode directories.
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
