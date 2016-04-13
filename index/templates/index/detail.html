@@ -2,8 +2,16 @@
 
 
 {% block body %}
-    <img src="{{home.home_pic}}">
-    <h1>{{home.street}}</h1>
-    <h3>{{home.city}}<h3>
-    <h3>{{home.price}}
+  <div class="col-sm-4 col-md-3">
+      <div class="panel panel-default">
+          <div class="panel-body">
+              <a href="{% url 'index:detail' home.id %}">
+                  <img src="{{home.home_pic.url}}" class="img-responsive">
+              </a>
+              <h1>{{home.street}}</h1>
+              <h3>{{home.city}}<h3>
+              <h3>{{home.price}}
+          </div>
+      </div>
+  </div>
 {% endblock %}

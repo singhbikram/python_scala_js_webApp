@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.views import generic
 from django.views.generic import View
+from django.core.urlresolvers import reverse_lazy
 from .models import Home
 from .form import UserForm
 
@@ -19,6 +20,15 @@ class DetailView(generic.DetailView):
 class HomeCreate(CreateView):
     model = Home
     fields = ['street', 'city', 'price']
+
+class HomeUpdate(UpdateView):
+    model = Home
+    fields = ['street', 'city', 'price']
+
+class HomeDelete(DeleteView):
+    model = Home
+    success_url = reverse_lazy('index:index')
+
 
 class UserFormView(View):
     form_class = UserForm
@@ -47,7 +57,7 @@ class UserFormView(View):
                     login(request, user)
                     return redirect('index:index')
 
-        return render(request, self.template_name, {'form': form})            
+        return render(request, self.template_name, {'form': form})
 
 
 

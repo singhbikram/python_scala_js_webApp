@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 
 # Create your models here.
 class Home(models.Model):
+    home_pic = models.FileField(name=None)
     street = models.CharField(max_length=250)
     city = models.CharField(max_length=100)
     price = models.IntegerField()

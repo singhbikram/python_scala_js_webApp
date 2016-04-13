@@ -8,5 +8,14 @@ urlpatterns = [
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
     #/homes/12
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
-    url(r'home/add/$', views.HomeCreate.as_view(), name = 'home-add'),
+    #add home
+    url(r'home/add/$', views.HomeCreate.as_view(), name ='home-add'),
+
+    # update home
+    url(r'index/(?P<pk>[0-9]+)/$', views.HomeUpdate.as_view(), name='home-update'),
+
+    # delete home
+    url(r'index/(?P<pk>[0-9]+)/delete/$', views.HomeDelete.as_view(), name='home-delete'),
+
+
 ]
