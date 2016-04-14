@@ -31,7 +31,7 @@
     <!--
     -->
 
-    <div class="row-xs-12" style="margin: 20px 200px 0px 200px; padding: 0px;">
+    <div class="row-xs-12 " style="margin: auto; padding: 10px; width:40%;">
 	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -47,7 +47,7 @@
 				<img src="/static/index/images/swiss1.jpg" alt="first" height="345">
 				<div class="carousel-caption">
 					<h3>Swan</h3>
-					<p>Swan in the lake.</p>
+					<p >Swan in the lake.</p>
 				</div>
 			</div>
 
@@ -75,11 +75,18 @@
 		</a>
 		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
 		  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		  <span class="sr-only">Next</span>
+		  <sptext-align: right; an class="sr-only">Next</span>
 		</a>
 	  </div>
 	</div>
-	<!--
+</div>
+<!-- registration -->
+<div style="margin: auto; padding: 10px; width:40%; color:blue; text-align:center; font-weight:bold; font-size:2.5em;">
+    <a href="{% url 'index:register' %}" >New User Sign Up </a>
+</div>
+
+
+  <!--
   -->
     {% if object_list %}
       <h3>Here are all the homes.</h3>
